@@ -7,5 +7,8 @@ output "ip" {
     description = "IP address my EC2"
 }
 output "ip_elastic" {
-   value = aws_eip.ip.address
+    value = aws_eip.ip.public_ip
+}
+output "volume_id" {
+    value = aws_ebs_volume.volume.id
 }
