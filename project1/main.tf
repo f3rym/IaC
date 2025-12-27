@@ -7,10 +7,12 @@ resource "aws_instance" "server_production" {
       name = var.stand_name
     }
 }
+//key-pair
 resource "aws_key_pair" "key" {
     key_name = "mykey"
     public_key = file("~/.ssh/id_rsa.pub")
 }
+//security_groups
 resource "aws_security_group" "sg" {
     name = "allow-all"
     ingress {
@@ -24,5 +26,11 @@ resource "aws_security_group" "sg" {
         to_port = 0
         protocol = "-1"
         cidr_blocks = ["0.0.0.0/0"]
+    }
+}
+// elastic ip
+resource "aws_eip" "ip" {
+    tags = {
+      name = devops-eip
     }
 }

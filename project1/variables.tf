@@ -3,7 +3,7 @@ variable "region" {
     description = "AWS Region"
 }
 variable "ami" {
-    default = "ami-00831fc7c1e3ddc60"
+    default = "ami-053b0d53c279acc90"
     description = "Type OS"
 }
 variable "type" {
