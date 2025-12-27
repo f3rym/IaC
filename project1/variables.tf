@@ -12,6 +12,6 @@ variable "type" {
     description = "Type hardware"
 }
 variable "stand_name" {
-  default = "Demo system"
+  default = "xfusion-ec2"
   description = "Name system in ec2"
 }
