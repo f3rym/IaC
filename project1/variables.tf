@@ -1,7 +1,8 @@
 variable "region" {
-    default = "us-east-1"
+    default = ["us-east-1", "us-east-1a"]
     description = "AWS Region"
 }
+
 variable "ami" {
     default = "ami-053b0d53c279acc90"
     description = "Type OS"

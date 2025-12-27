@@ -37,9 +37,9 @@ resource "aws_eip" "ip" {
 }
 //volume 
 resource "aws_ebs_volume" "volume" {
-    availability_zone = var.region
+    availability_zone = var.region[1]
     size = 2
-    type = gp3
+    type = "gp3"
     tags = {
       name = "datacenter-volume"
     }
