@@ -30,7 +30,9 @@ resource "aws_security_group" "sg" {
 }
 // elastic ip
 resource "aws_eip" "ip" {
+    instance = aws_instance.server_production.id
+    domain = "vpc"
     tags = {
-      name = devops-eip
+      name = "devops-eip"
     }
 }
